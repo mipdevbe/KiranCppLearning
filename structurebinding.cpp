@@ -1,5 +1,5 @@
 // structurebinding.cpp
-// Explained by Kirzan on 2026-03-01
+// Explained by Kiran on 2026-03-01
 // This code demonstrates the use of structured bindings in C++17 to unpack pairs from a vector and to retrieve the top student score using an optional return type.
 
 #include <iostream>
@@ -23,17 +23,18 @@ vector<pair<string, int>> studentScores {
                    
 optional<pair<string, int>> getTopStudentScore()
 {
-    auto begin = std::begin(studentScores);
-    auto end   = std::end(studentScores);
 
-    if (begin == end)
+    if (studentScores.empty())
         return std::nullopt;
 
-    auto result = std::max_element(begin, end,
-        [](const pair<string, int>& s1, const pair<string, int>& s2)
+    auto result = std::max_element(
+        studentScores.begin(),
+        studentScores.end(),
+        [](const auto& s1, const auto& s2)
         {
             return s1.second < s2.second;
-        });
+        }
+    );
 
     return *result;
 }
