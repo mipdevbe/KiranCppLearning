@@ -1,4 +1,6 @@
 // structurebinding.cpp
+// Explained by Kirzan on 2026-03-01
+// This code demonstrates the use of structured bindings in C++17 to unpack pairs from a vector and to retrieve the top student score using an optional return type.
 
 #include <iostream>
 #include <vector>
