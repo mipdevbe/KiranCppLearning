@@ -26,7 +26,7 @@ optional<pair<string, int>> getTopStudentScore()
 
     if (studentScores.empty())
         return std::nullopt;
-
+    cout << "Finding top students...\n";
     auto result = std::max_element(
         studentScores.begin(),
         studentScores.end(),
@@ -35,10 +35,8 @@ optional<pair<string, int>> getTopStudentScore()
             return s1.second < s2.second;
         }
     );
-
-    auto [name, score]=*result;
-
-    return make_pair(name,score+1);
+    
+    return *result;
 }
 
 int main()
