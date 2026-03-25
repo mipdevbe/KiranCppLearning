@@ -42,7 +42,11 @@ optional<pair<string, int>> getTopStudentScore()
 int main()
 {
     for (const auto& [id, name] : users){
+<<<<<<< HEAD
         cout << "[USER]" <<id<<"->"<<name<<endl;
+=======
+        cout << "User: " << name << " (ID: " << id << ")\n";
+>>>>>>> 3cd54fb12da5f95a0360cd8b5db7cf433b5117ed
     }    
 
     if (auto topStudent = getTopStudentScore(); topStudent.has_value()) {
