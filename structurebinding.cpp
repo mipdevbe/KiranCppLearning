@@ -41,6 +41,7 @@ optional<pair<string, int>> getTopStudentScore()
 
 int main()
 {
+
     for (const auto& [id, name] : users){
         cout << "User: " << name << " (ID: " << id << ")\n";
     }    
