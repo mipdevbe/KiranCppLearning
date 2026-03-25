@@ -36,7 +36,9 @@ optional<pair<string, int>> getTopStudentScore()
         }
     );
 
-    return *result;
+    auto [name, score]=*result;
+
+    return make_pair(name,score+1);
 }
 
 int main()
