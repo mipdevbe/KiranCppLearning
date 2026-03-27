@@ -44,6 +44,7 @@ optional<pair<string, int>> getTopStudentScore()
 
 int main()
 {
+    cout << "Finding topmost student...\n";
 
     for (const auto& [id, name] : users){
         cout << "User: " << name << " (ID: " << id << ")\n";
@@ -59,5 +60,9 @@ int main()
     } else {
         cout << "No students found." << endl;
     }
+
+    cout << "Press any key to exit...\n";
+    getchar();
+
     return 0;
 }
