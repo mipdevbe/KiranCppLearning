@@ -17,7 +17,7 @@ vector<pair<int, string>> users {
 
 vector<pair<string, int>> studentScores {
     {"Michel", 5},
-    {"Kiran", 10}
+    {"Kiran", 50}
 };
 
                    
