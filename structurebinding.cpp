@@ -45,14 +45,14 @@ optional<pair<string, int>> getTopStudentScore()
 int main()
 {
 
-    for (const auto& [id, name] : users){
-        cout << "User: " << name << " (ID: " << id << ")\n";
+    for (const auto& [id, username] : users){
+        cout << "User: " << username << " (ID: " << id << ")\n";
     }    
 
     if (auto topStudent = getTopStudentScore(); topStudent) {
-        auto [name, score] = *topStudent;
+        auto [username, score] = *topStudent;
         cout << "Top student: "
-             << name
+             << username
              << " Score: "
              << score
              << endl;
