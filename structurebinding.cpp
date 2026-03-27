@@ -49,7 +49,7 @@ int main()
         cout << "User: " << name << " (ID: " << id << ")\n";
     }    
 
-    if (auto topStudent = getTopStudentScore(); topStudent.has_value()) {
+    if (auto topStudent = getTopStudentScore(); topStudent) {
         auto [name, score] = *topStudent;
         cout << "Top student: "
              << name
