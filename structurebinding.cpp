@@ -17,7 +17,7 @@ vector<pair<int, string>> users {
 
 vector<pair<string, int>> studentScores {
     {"Michel", 5},
-    {"Kiran", 10},
+    {"Kiran", 50},
     {"Marc", 80}
 };
 
@@ -27,7 +27,7 @@ optional<pair<string, int>> getTopStudentScore()
 
     if (studentScores.empty())
         return std::nullopt;
-
+    cout << "Finding top students...\n";
     auto result = std::max_element(
         studentScores.begin(),
         studentScores.end(),
@@ -36,16 +36,29 @@ optional<pair<string, int>> getTopStudentScore()
             return s1.second < s2.second;
         }
     );
-
-    auto [name, score]=*result;
-
-    return make_pair(name,score+1);
+    
+    return *result;
 }
 
 int main()
 {
+
     for (const auto& [id, name] : users){
+<<<<<<< HEAD
+<<<<<<< HEAD
+        cout << "User: " << name << " (ID: " << id << ")\n";
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 232cbff (Same line changed)
         cout << "[USER]" <<id<<"->"<<name<<endl;
+=======
+        cout << "User: " << name << " (ID: " << id << ")\n";
+>>>>>>> 3cd54fb (Same line changed)
+<<<<<<< HEAD
+>>>>>>> 232cbff (Same line changed)
+=======
+>>>>>>> 232cbff (Same line changed)
     }    
 
     if (auto topStudent = getTopStudentScore(); topStudent.has_value()) {
