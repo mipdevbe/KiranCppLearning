@@ -50,7 +50,7 @@ int main()
     }    
 
     if (auto topStudent = getTopStudentScore(); topStudent) {
-        const auto& [name, score] = *topStudent;
+        const auto& [username, score] = *topStudent;
         cout << "Top student: "
              << username
              << " Score: "
