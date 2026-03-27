@@ -29,7 +29,7 @@ optional<pair<string, int>> getTopStudentScore()
         return std::nullopt;
 
     cout << "Finding top students...\n";
-    
+
     auto result = std::max_element(
         studentScores.begin(),
         studentScores.end(),
@@ -50,7 +50,7 @@ int main()
     }    
 
     if (auto topStudent = getTopStudentScore(); topStudent) {
-        auto [username, score] = *topStudent;
+        const auto& [name, score] = *topStudent;
         cout << "Top student: "
              << username
              << " Score: "
