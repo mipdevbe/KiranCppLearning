@@ -27,7 +27,9 @@ optional<pair<string, int>> getTopStudentScore()
 
     if (studentScores.empty())
         return std::nullopt;
+
     cout << "Finding top students...\n";
+    
     auto result = std::max_element(
         studentScores.begin(),
         studentScores.end(),
@@ -44,21 +46,7 @@ int main()
 {
 
     for (const auto& [id, name] : users){
-<<<<<<< HEAD
-<<<<<<< HEAD
         cout << "User: " << name << " (ID: " << id << ")\n";
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 232cbff (Same line changed)
-        cout << "[USER]" <<id<<"->"<<name<<endl;
-=======
-        cout << "User: " << name << " (ID: " << id << ")\n";
->>>>>>> 3cd54fb (Same line changed)
-<<<<<<< HEAD
->>>>>>> 232cbff (Same line changed)
-=======
->>>>>>> 232cbff (Same line changed)
     }    
 
     if (auto topStudent = getTopStudentScore(); topStudent.has_value()) {
